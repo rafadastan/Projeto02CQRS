@@ -19,7 +19,7 @@
 
 - 📄 Know about my experiences [+2 experience for Developer](+2 experience for Developer)
 
-- ⚡ Fun fact **I liked player with my brothers**
+- ⚡ Fun fact **I like to play guitar acoustic and play a videogame.**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
