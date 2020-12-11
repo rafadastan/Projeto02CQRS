@@ -12,7 +12,17 @@ namespace Projeto02.Application.Mappings
         //construtor -> ctor + 2x[tab]
         public EntityToDTOMap()
         {
+            #region Usuarios
+
             CreateMap<UsuarioEntity, UsuarioDTO>();
+
+            #endregion
+
+            #region Tarefas
+
+            CreateMap<TarefaEntity, TarefaDTO>();
+
+            #endregion
         }
     }
 }

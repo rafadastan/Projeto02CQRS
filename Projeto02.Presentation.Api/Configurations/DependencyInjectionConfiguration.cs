@@ -22,6 +22,7 @@ namespace Projeto02.Presentation.Api.Configurations
 
             services.AddTransient<IUsuarioApplicationService, UsuarioApplicationService>();
             services.AddTransient<ILoginApplicationService, LoginApplicationService>();
+            services.AddTransient<ITarefaApplicationService, TarefaApplicationService>();
 
             #endregion
 

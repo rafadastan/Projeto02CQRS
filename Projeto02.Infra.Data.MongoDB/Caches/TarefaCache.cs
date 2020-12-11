@@ -47,5 +47,26 @@ namespace Projeto02.Infra.Data.MongoDB.Caches
             var filter = Builders<TarefaDTO>.Filter.Eq(u => u.Id, id);
             return mongoDbContext.Tarefas.Find(filter).FirstOrDefault();
         }
+
+        public List<TarefaDTO> GetByDatas(DateTime dataMin, DateTime dataMax, Guid usuarioId)
+        {
+            var builder = Builders<TarefaDTO>.Filter;
+
+            var filter = builder.Gte(t => t.DataInicio, dataMin)
+                       & builder.Lte(t => t.DataInicio, dataMax)
+                       & builder.Eq(t => t.Usuario.Id, usuarioId);
+
+            return mongoDbContext.Tarefas.Find(filter).ToList();
+        }
+
+        public TarefaDTO Get(Guid tarefaId, Guid usuarioId)
+        {
+            var builder = Builders<TarefaDTO>.Filter;
+
+            var filter = builder.Eq(t => t.Id, tarefaId)
+                       & builder.Eq(t => t.Usuario.Id, usuarioId);
+
+            return mongoDbContext.Tarefas.Find(filter).FirstOrDefault();
+        }
     }
 }
